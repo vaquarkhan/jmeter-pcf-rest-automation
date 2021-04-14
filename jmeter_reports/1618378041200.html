@@ -1,0 +1,208 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Failed UseCase report</title>
+<style type="text/css">
+
+
+				body {
+					font:normal 68% verdana,arial,helvetica;
+					color:#000000;
+				}
+				table tr td, table tr th {
+					font-size: 68%;
+				}
+				table.details tr th{
+				    color: #ffffff;
+					font-weight: bold;
+					text-align:center;
+					background:#2674a6;
+					white-space: nowrap;
+				}
+				table.details tr td{
+					background:#eeeee0;
+					/*white-space: nowrap;*/
+				}
+				h1 {
+					margin: 0px 0px 5px; font: 165% verdana,arial,helvetica
+				}
+				h2 {
+					margin-top: 1em; margin-bottom: 0.5em; font: bold 125% verdana,arial,helvetica
+				}
+				h3 {
+					margin-bottom: 0.5em; font: bold 115% verdana,arial,helvetica
+				}
+				.Failure {
+					font-weight:bold; color:red;
+				}
+				
+	
+				img
+				{
+				  border-width: 0px;
+				}
+				
+				.expand_link
+				{
+				   position=absolute;
+				   right: 0px;
+				   width: 27px;
+				   top: 1px;
+				   height: 27px;
+				}
+				
+				.page_details
+				{
+				   display: none;
+				}
+                                
+                                .page_details_expanded
+                                {
+                                    display: block;
+                                    display/* hide this definition from  IE5/6 */: table-row;
+                                }
+
+
+			</style>
+<script language="JavaScript">
+                           function expand(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details_expanded";
+			   }
+			   
+			   function collapse(details_id)
+			   {
+			      
+			      document.getElementById(details_id).className = "page_details";
+			   }
+			   
+			   function change(details_id)
+			   {
+			      if(document.getElementById(details_id+"_image").src.match("expand"))
+			      {
+			         document.getElementById(details_id+"_image").src = "collapse.png";
+			         expand(details_id);
+			      }
+			      else
+			      {
+			         document.getElementById(details_id+"_image").src = "expand.png";
+			         collapse(details_id);
+			      } 
+                           }
+			</script>
+</head>
+<body>
+<h1><b>Use Case report</b></h1>
+<br/>
+<table width="100%">
+<tbody><tr>
+<td align="left">Date report:14-Apr-2021 10:57:24 </td></tr>
+</tbody></table>
+<hr size="1">
+<h3><b>Use case:</b>Signup Request</h3>
+<hr size="1" width="95%" align="center">
+<h3>Detailed Information:</h3>
+<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tbody><tr valign="top">
+<th>Request URL</th>
+<th>Request Type</th>
+</tr>
+<tr valign="top" class="">
+<td>https://null/posts/</td>
+<td>POST</td>
+</tr>
+</table>
+<hr size="1" width="95%" align="center">
+<br/>
+<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tbody><tr valign="top">
+<th>Request Header</th>
+</tr>
+<tr valign="top" class="">
+<td>Connection: keep-alive
+Content-Length: 139
+Content-Type: text/plain
+Host: null
+User-Agent: Apache-HttpClient/4.5.12 (Java/15.0.2)
+</td>
+</tr>
+</table>
+<hr size="1" width="95%" align="center">
+<br/>
+<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tbody><tr valign="top">
+<th>Request Data</th>
+</tr>
+<tr valign="top" class="">
+<td>{
+    "email": "xyz@xyz.com",
+	"fname": "first name",
+    "lname": "last name",
+    "cellnumber": "1231234345",
+    "gender": "xyz"
+}</td>
+</tr>
+</table>
+<hr size="1" width="95%" align="center">
+<br/>
+<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tbody><tr valign="top">
+<th>Response Header</th>
+</tr>
+<tr valign="top" class="">
+<td></td>
+</tr>
+</table>
+<hr size="1" width="95%" align="center">
+<br/>
+<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tbody><tr valign="top">
+<th>Response Data</th>
+</tr>
+<tr valign="top" class="">
+<td>java.net.UnknownHostException: No such host is known (null)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:932)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1517)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:851)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1507)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1366)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1300)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:404)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:935)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:646)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1296)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1285)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:638)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:558)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:489)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:256)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+
+</td>
+</tr>
+</table>
+<hr size="1" width="95%" align="center">
+<br/>
+<table align="center" class="details" border="0" cellpadding="5" cellspacing="2" width="95%">
+<tbody><tr valign="top">
+<th>Assertions: Name</th>
+<th>Failure</th>
+<th>Error</th>
+<th>Failure Message</th>
+</tr>
+<tr valign="top" class="">
+<tr><td >NA</td><td>NA</td><td>NA</td><td>NA</td></tr></tr>
+</table>
+</body></html>

@@ -1,0 +1,12 @@
+applications:
+  - name: jmeter-pcf-rest-automation
+    memory: 2G
+    disk_quota: 1G
+    instances: 1
+    health-check-type: none
+    path: target/jmeter-pcf-rest-automation-0.0.1-SNAPSHOT.jar
+    env: 
+    SPRING_PROFILES_ACTIVE : "dev"
+    
+  routes:
+  - route: jmeter-pcf-rest-automation.app.vaquar.khan.com
